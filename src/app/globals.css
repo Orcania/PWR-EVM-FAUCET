@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+main {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.address-input {
+  @apply outline-none;
+  @apply border;
+
+  @apply border-[#DEDDF6];
+  @apply rounded-2xl;
+
+  @apply px-6;
+  @apply py-2;
+
+  @apply text-sm;
+
+  @apply hover:border-[#AE9CFE];
+
+  @apply transition;
+  @apply duration-300;
+
+  @apply focus:border-black;
+  
+}
