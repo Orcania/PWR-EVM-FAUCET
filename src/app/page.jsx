@@ -11,29 +11,27 @@ import Image from "next/image";
 export default function Home() {
   const url = process.env.NEXT_PUBLIC_API;
 
-  const [token, setToken] = useState(0);
-  useEffect(() => {
+  const [token, setToken] = useState(() => {
     axios({
       method: "GET",
       url: `${url}/claimedPWR/`,
     }).then((res) => {
       setToken(res.data.data.claimedPWR);
     });
-  }, [token, setToken, url]);
+  });
 
-  const claimTokens = useCallback(() => {
-    axios({
-      method: 'POST',
-      url: `${url}/claimPWR/?userAddress=${value}`,
-    }).then((res) => console.log(res));
-  })
-
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
   const onChange = (e) => {
-    setValue(() => e.target.value);
-    console.log(value)
+    setValue(e.target.value);
   };
+
+  function claimTokens() {
+    axios({
+      method: "POST",
+      url: `${url}/claimPWR/?userAddress=${value}`,
+    })
+  }
 
   return (
     <main>
@@ -65,12 +63,12 @@ export default function Home() {
               placeholder="Enter Your Wallet Address (0x...)"
             />
 
-            <button
+            <div
               onClick={claimTokens}
-              className="sm:w-[502px] w-full h-[48px] bg-[#112FF8] rounded-[32px] px-6 py-2 text-sm text-white"
+              className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-[#112FF8] rounded-[32px] px-6 py-2 text-sm text-white"
             >
               Give Me 100 PWR
-            </button>
+            </div>
           </div>
 
           <div className="bg-[#F9F8FF] rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
