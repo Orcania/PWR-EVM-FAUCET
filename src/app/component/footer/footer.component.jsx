@@ -14,7 +14,7 @@ export default function FooterComponent() {
         />
       ),
       label: "Join our Twitter",
-      href: "#",
+      href: "https://twitter.com/pwrlabs",
     },
     {
       icon: () => (
@@ -27,7 +27,7 @@ export default function FooterComponent() {
         />
       ),
       label: "Join our Telegram",
-      href: "#",
+      href: "https://t.me/pwrlabsofficial",
     },
     {
       icon: () => (
@@ -40,7 +40,7 @@ export default function FooterComponent() {
         />
       ),
       label: "Join our Discord",
-      href: "#",
+      href: "https://discord.gg/kXk4bxJ7Z9",
     },
   ];
 
@@ -65,6 +65,7 @@ export default function FooterComponent() {
         <div className="flex justify-center items-center gap-x-4 mt-9">
           {socials.map((social, index) => (
             <Link
+              target="_blank"
               href={social.href}
               key={index}
               className="flex gap-x-4 items-center bg-[#1E1F31] rounded-2xl w-[134px] h-[60px] px-4 py-3"

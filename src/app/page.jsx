@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-import { useEffect, useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 
 import FooterComponent from "./component/footer/footer.component";
 import HeaderComponent from "./component/header/header.component";
