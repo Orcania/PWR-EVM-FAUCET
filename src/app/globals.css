@@ -23,7 +23,7 @@ main {
   @apply hover:border-[#AE9CFE];
 
   @apply transition;
-  @apply duration-300;
+  @apply duration-200;
 
   @apply focus:border-black;
   

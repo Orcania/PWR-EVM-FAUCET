@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import FooterComponent from "./component/footer/footer.component";
 import HeaderComponent from "./component/header/header.component";
@@ -15,14 +15,18 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Home() {
   const url = process.env.NEXT_PUBLIC_API;
 
-  const [token, setToken] = useState(() => {
+  const [token, setToken] = useState();
+
+  useEffect(() => {
     axios({
       method: "GET",
       url: `${url}/claimedPWR/`,
-    }).then((res) => {
-      setToken(res.data.data.claimedPWR);
-    });
-  });
+    })
+      .then((res) => {
+        setToken(res.data.data.claimedPWR);
+      })
+      .catch((err) => setToken("Error"));
+  }, [token, url]);
 
   const [value, setValue] = useState("");
 
@@ -37,8 +41,8 @@ export default function Home() {
     }).then((res) => {
       if (res.data.status == "fail" || res.data.status == "error") {
         toast.error(res.data.data.message);
-      } else {
-        toast.success(res.data.data.message);
+      } else if (res.data.status == "success") {
+        toast.success("PWR Claimed");
       }
     });
   }
