@@ -35,15 +35,10 @@ export default function Home() {
       method: "POST",
       url: `${url}/claimPWR/?userAddress=${value}`,
     }).then((res) => {
-      if (
-        res.data.data.message ==
-        "org.web3j.protocol.core.Response$Error@616788dc"
-      ) {
-        toast.error("Invalid address.");
-      } else if (res.data.status == "success") {
-        toast.success("Request successfull!");
-      } else if (res.data.status == "error") {
-        toast.error("Error, please try again.");
+      if (res.data.status == "fail" || res.data.status == "error") {
+        toast.error(res.data.data.message);
+      } else {
+        toast.success(res.data.data.message);
       }
     });
   }
@@ -57,24 +52,24 @@ export default function Home() {
       <ToastContainer />
 
       {/* Title */}
-      <h1 className="font-bold md:text-[56px] text-3xl text-center h-[68px]">
+      <h1 className="font-bold md:text-[56px] text-3xl text-center h-[68px] mx-5">
         PWR Chain EVM Faucet
       </h1>
 
       {/* Subtitle */}
-      <h2 className="mt-[20px] h-[26px] text-center">
+      <h2 className="mt-[20px] h-[26px] text-center mx-5">
         {" "}
         To prevent bots and abuse, the PWR EVM Faucet allows you to claim once
         every 24 hours
       </h2>
 
-      <form className="sm:mx-0 mx-3">
+      <form className="mx-5">
         {/* Field */}
         <div className="flex flex-col items-center field mt-9 space-y-4">
           <input
             onChange={onChange}
             value={value}
-            className="address-input sm:w-[800px] w-full h-[64px]"
+            className="address-input min-[820px]:w-[800px] w-full h-[64px]"
             type="text"
             placeholder="Enter Your Wallet Address (0x...)"
           />
