@@ -6,13 +6,19 @@
 
 main {
   font-family: 'Space Grotesk', sans-serif;
+ 
 }
+.main-section{
+  background-image: url('/bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
 
+
+}
 .address-input {
   @apply outline-none;
   @apply border;
 
-  @apply border-[#DEDDF6];
   @apply rounded-2xl;
 
   @apply px-6;
