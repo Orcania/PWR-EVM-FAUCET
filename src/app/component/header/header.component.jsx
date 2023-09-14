@@ -16,7 +16,7 @@ export default function HeaderComponent({ activeButton }) {
       }}
     >
       <div
-        className={`flex justify-between items-center mx-[90px] h-[80px] ${textColor}`}
+        className={`flex justify-between items-center h-[80px] md:mx-24 mx-5 ${textColor}`}
       >
         <svg
           className="w-auto h-auto "
@@ -34,7 +34,7 @@ export default function HeaderComponent({ activeButton }) {
           />
         </svg>
         <button
-          className={`border ${borderBtn}  ${bgBtn}  rounded-[32px] h-[36px] text-sm px-4 py-2 ${textColor}`}
+          className={`border ${borderBtn}  ${bgBtn}  rounded-[32px] h-[36px]  md:text-sm px-8 md:px-4 py-2 ${textColor}`}
         >
           Learn More
         </button>

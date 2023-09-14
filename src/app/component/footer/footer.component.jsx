@@ -68,7 +68,7 @@ export default function FooterComponent({ activeButton }) {
 
   return (
     <div className={`${bgColor} flex justify-center bg-[#F9F8FF] py-20 `}>
-      <div className="">
+      <div className="flex flex-col">
         {/* Logo */}
         <svg
           className="w-auto h-auto mx-auto"
@@ -92,13 +92,13 @@ export default function FooterComponent({ activeButton }) {
           @WOM Protocol Pte. Ltd. All Rights reserved
         </h1>
         {/* Socials */}
-        <div className="flex justify-center items-center gap-x-4 mt-9">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 items-center justify-items-center mt-8">
           {socials.map((social, index) => (
             <Link
               target="_blank"
               href={social.href}
               key={index}
-              className={`flex gap-x-4 items-center ${textColor} ${socail} rounded-2xl w-[134px] h-[60px] px-4 py-3`}
+              className={`flex gap-x-4 items-center ${textColor} ${socail} rounded-2xl w-[134px]  h-[60px] px-4 py-3`}
             >
               {social.icon()}
               <span

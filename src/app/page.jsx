@@ -26,7 +26,7 @@ export default function Home() {
     <main className={`${bgColor}`}>
       <HeaderComponent activeButton={activeButton}></HeaderComponent>
       <div className="main-section w-full flex flex-col justify-center items-center pt-10">
-        <div className="flex justify-center items-center my-20 w-2/4">
+        <div className="flex justify-center items-center my-20 md:w-2/4 w-full">
           <div
             className={`${Boxbtn} w-[279px] rounded-[56px] border ${border} flex justify-start items-start`}
           >
