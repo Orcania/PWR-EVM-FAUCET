@@ -124,7 +124,7 @@ export default function EVM() {
               </svg>
             </div>
             <div className="flex flex-col gap-y-2  h-[65px]">
-              <h3 className="h-[30px] text-sm text-[#9C9BB3] font-medium px-2">
+              <h3 className="h-[22px] text-sm text-[#9C9BB3] font-medium px-2">
                 DISTRIBUTED TOKENS
               </h3>
               <h3 className="font-bold px-2 text-[#1E1F31]">{token}</h3>

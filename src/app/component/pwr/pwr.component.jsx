@@ -126,7 +126,7 @@ export default function PWR() {
             </div>
 
             <div className="flex flex-col gap-y-2 h-[65px]">
-              <h3 className="text-sm text-[#9C9BB3] font-medium px-2 h-[30px]">
+              <h3 className="text-sm text-[#9C9BB3] font-medium px-2 h-[22px]">
                 DISTRIBUTED TOKENS
               </h3>
               <h3 className="font-bold px-2 text-white">{token}</h3>
