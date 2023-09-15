@@ -23,6 +23,7 @@ export default function PWR() {
         setToken(res.data.data.claimedPWR);
       })
       .catch((err) => setToken("Error"));
+    console.log(token);
   }, [token, url]);
 
   const [value, setValue] = useState("");
@@ -85,15 +86,47 @@ export default function PWR() {
 
         <div className="bg-gray-800 rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
           <div className="flex items-center gap-x-2 mt-3">
-            <Image
-              className="w-auto h-auto px-1.5"
-              src="/exchange.svg"
-              width={100}
-              height={100}
-              alt=""
-            />
-            <div className="flex flex-col gap-y-2">
-              <h3 className="h-[24px] text-sm text-[#9C9BB3] font-medium px-2">
+            <div className="h-[50px] flex justify-center items-center mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="32"
+                viewBox="0 0 25 32"
+                fill="none"
+              >
+                <path
+                  d="M6.1246 15.2701L0.999924 10.4333L5.83679 5.30859"
+                  stroke="#737289"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M1.00057 10.4336L23.9039 10.4327"
+                  stroke="#737289"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.7793 26.5958L23.9039 21.759L19.0671 16.6343"
+                  stroke="#737289"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M23.904 21.7588L1.00063 21.7579"
+                  stroke="#737289"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div className="flex flex-col gap-y-2 h-[65px]">
+              <h3 className="text-sm text-[#9C9BB3] font-medium px-2 h-[30px]">
                 DISTRIBUTED TOKENS
               </h3>
               <h3 className="font-bold px-2 text-white">{token}</h3>

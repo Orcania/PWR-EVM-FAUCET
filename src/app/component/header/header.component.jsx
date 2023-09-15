@@ -34,7 +34,7 @@ export default function HeaderComponent({ activeButton }) {
           />
         </svg>
         <button
-          className={`border ${borderBtn}  ${bgBtn}  rounded-[32px] h-[36px]  md:text-sm px-8 md:px-4 py-2 ${textColor}`}
+          className={`border ${borderBtn}  ${bgBtn}  rounded-[32px]  md:text-sm px-8 md:px-4 md:py-2 py-3 ${textColor}`}
         >
           Learn More
         </button>
