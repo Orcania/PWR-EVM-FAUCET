@@ -80,12 +80,12 @@ export default function EVM() {
             placeholder="Enter Your Wallet Address (0x...)"
           />
 
-          <div
+          <button
             type="submit"
             className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-[#112FF8] rounded-[32px] px-6 py-2 text-sm text-white"
           >
             Give Me 100 PWR
-          </div>
+          </button>
         </div>
 
         <div className="bg-[#F9F8FF] rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
