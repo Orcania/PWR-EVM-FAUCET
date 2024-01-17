@@ -60,16 +60,15 @@ export default function EVM() {
     <main className="">
       {/* Title */}
       <h1 className="font-bold md:text-[56px] text-3xl text-center h-[68px] mx-5">
-        PWR Chain EVM Faucet
+        Ethereum 2.0 Faucet
       </h1>
 
       {/* Subtitle */}
       <h2 className="mt-[20px] h-[26px] text-center mx-5 md:mb-0 mb-12">
-        To prevent bots and abuse, the PWR EVM Faucet allows you to claim once
-        every 24 hours
+        To prevent bots and abuse, the Ethereum 2.0 Faucet allows you to claim
+        once every 24 hours in the Ethereum faucet, change the button to ETH
       </h2>
-
-      <form className="mx-5" onSubmit={handleFormSubmit}>
+      <form className="mx-5">
         {/* Field */}
         <div className="flex flex-col items-center field mt-9 space-y-4">
           <input

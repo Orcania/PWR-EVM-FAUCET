@@ -31,7 +31,7 @@ export default function Home() {
             className={`${Boxbtn} w-[279px] rounded-[56px] border ${border} flex justify-start items-start`}
           >
             <div
-              className={`px-4 py-1 flex-col justify-start items-start inline-flex ${
+              className={` ${
                 activeButton === "PWR"
                   ? "border border-indigo-500 rounded-[64px]"
                   : ""
@@ -39,13 +39,13 @@ export default function Home() {
             >
               <button
                 onClick={() => toggleButton("PWR")}
-                className={`${txtbtn} px-2 py-1 text-base font-normal font-['Space Grotesk'] leading-relaxed`}
+                className={`${txtbtn} py-3   px-3 `}
               >
-                PWR Faucet
+                PWR Base Layer
               </button>
             </div>
             <div
-              className={`px-4 py-1 flex-col justify-start items-start inline-flex ${
+              className={`${
                 activeButton === "EVM"
                   ? "border border-indigo-500 rounded-[64px]"
                   : ""
@@ -53,9 +53,9 @@ export default function Home() {
             >
               <button
                 onClick={() => toggleButton("EVM")}
-                className={`${txtbtn} px-2 py-1 text-base font-normal font-['Space Grotesk'] leading-relaxed`}
+                className={`${txtbtn} px-4 py-3`}
               >
-                EVM Faucet
+                Ethereum 2.0
               </button>
             </div>
           </div>
