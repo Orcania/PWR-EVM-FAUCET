@@ -38,17 +38,12 @@ export default function EVM() {
       url: `${url}/claimPWR/?userAddress=${value}`,
     }).then((res) => {
       if (res.data.status == "fail" || res.data.status == "error") {
-        toast.error(res.data.data.message);z
+        toast.error(res.data.data.message);
       } else if (res.data.status == "success") {
         toast.success("PWR Claimed");
       }
     });
   }
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    claimTokens();
-  };
 
   const [activeButton, setActiveButton] = useState("PWR");
 
@@ -68,6 +63,7 @@ export default function EVM() {
         To prevent bots and abuse, the Ethereum 2.0 Faucet allows you to claim
         once every 24 hours in the Ethereum faucet
       </h2>
+
       <form className="mx-5">
         {/* Field */}
         <div className="flex flex-col items-center field mt-9 space-y-4">
@@ -79,12 +75,12 @@ export default function EVM() {
             placeholder="Enter Your Wallet Address (0x...)"
           />
 
-          <button
-            type="submit"
+          <div
+            onClick={claimTokens}
             className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-[#112FF8] rounded-[32px] px-6 py-2 text-sm text-white"
           >
             Give Me 100 ETH
-          </button>
+          </div>
         </div>
 
         <div className="bg-[#F9F8FF] rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
