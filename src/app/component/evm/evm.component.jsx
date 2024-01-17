@@ -4,15 +4,14 @@ import axios from "axios";
 
 import { useEffect, useState } from "react";
 
-import Image from "next/image";
-
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function EVM() {
   const url = process.env.NEXT_PUBLIC_API_EVM;
 
   const [token, setToken] = useState();
+  const [value, setValue] = useState("");
 
   useEffect(() => {
     axios({
@@ -22,11 +21,11 @@ export default function EVM() {
       .then((res) => {
         setToken(res.data.data.claimedPWR);
       })
-      .catch((err) => setToken("Error"));
-    console.log(token);
-  }, [token, url]);
-
-  const [value, setValue] = useState("");
+      .catch((err) => {
+        console.error(err);
+        setToken("Error");
+      });
+  }, [url]);
 
   const onChange = (e) => {
     setValue(e.target.value);
@@ -36,19 +35,24 @@ export default function EVM() {
     axios({
       method: "POST",
       url: `${url}/claimPWR/?userAddress=${value}`,
-    }).then((res) => {
-      if (res.data.status == "fail" || res.data.status == "error") {
-        toast.error(res.data.data.message);
-      } else if (res.data.status == "success") {
-        toast.success("PWR Claimed");
-      }
-    });
+    })
+      .then((res) => {
+        if (res.data.status === "fail" || res.data.status === "error") {
+          toast.error(res.data.data.message);
+        } else if (res.data.status === "success") {
+          toast.success("ETH Claimed");
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error("Error claiming ETH");
+      });
   }
 
-  const [activeButton, setActiveButton] = useState("PWR");
-
-  const toggleButton = (buttonName) => {
-    setActiveButton(buttonName);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    claimTokens();
+    setValue("");
   };
 
   return (
@@ -64,7 +68,7 @@ export default function EVM() {
         once every 24 hours in the Ethereum faucet
       </h2>
 
-      <form className="mx-5">
+      <form className="mx-5" onSubmit={handleFormSubmit}>
         {/* Field */}
         <div className="flex flex-col items-center field mt-9 space-y-4">
           <input
@@ -75,12 +79,12 @@ export default function EVM() {
             placeholder="Enter Your Wallet Address (0x...)"
           />
 
-          <div
-            onClick={claimTokens}
+          <button
+            type="submit"
             className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-[#112FF8] rounded-[32px] px-6 py-2 text-sm text-white"
           >
             Give Me 100 ETH
-          </div>
+          </button>
         </div>
 
         <div className="bg-[#F9F8FF] rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">

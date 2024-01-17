@@ -4,15 +4,14 @@ import axios from "axios";
 
 import { useEffect, useState } from "react";
 
-import Image from "next/image";
-
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function PWR() {
   const url = process.env.NEXT_PUBLIC_API_PWR;
 
   const [token, setToken] = useState();
+  const [value, setValue] = useState("");
 
   useEffect(() => {
     axios({
@@ -25,8 +24,6 @@ export default function PWR() {
       .catch((err) => setToken("Error"));
     console.log(token);
   }, [token, url]);
-
-  const [value, setValue] = useState("");
 
   const onChange = (e) => {
     setValue(e.target.value);
@@ -50,12 +47,7 @@ export default function PWR() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     claimTokens();
-  };
-
-  const [activeButton, setActiveButton] = useState("PWR");
-
-  const toggleButton = (buttonName) => {
-    setActiveButton(buttonName);
+    setValue("");
   };
 
   return (
