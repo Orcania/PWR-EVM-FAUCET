@@ -66,7 +66,7 @@ export default function EVM() {
       {/* Subtitle */}
       <h2 className="mt-[20px] h-[26px] text-center mx-5 md:mb-0 mb-12">
         To prevent bots and abuse, the Ethereum 2.0 Faucet allows you to claim
-        once every 24 hours in the Ethereum faucet, change the button to ETH
+        once every 24 hours in the Ethereum faucet.
       </h2>
       <form className="mx-5">
         {/* Field */}
@@ -83,7 +83,7 @@ export default function EVM() {
             type="submit"
             className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-[#112FF8] rounded-[32px] px-6 py-2 text-sm text-white"
           >
-            Give Me 100 PWR
+            Give Me 100 ETH
           </button>
         </div>
 
