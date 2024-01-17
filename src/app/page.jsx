@@ -41,7 +41,7 @@ export default function Home() {
                 onClick={() => toggleButton("PWR")}
                 className={`${txtbtn} px-2 py-1 text-base font-normal font-['Space Grotesk'] leading-relaxed`}
               >
-                PWR Faucet
+                PWR Base Layer Faucet
               </button>
             </div>
             <div
@@ -55,7 +55,7 @@ export default function Home() {
                 onClick={() => toggleButton("EVM")}
                 className={`${txtbtn} px-2 py-1 text-base font-normal font-['Space Grotesk'] leading-relaxed`}
               >
-                EVM Faucet
+                Ethereum 2.0 Faucet
               </button>
             </div>
           </div>

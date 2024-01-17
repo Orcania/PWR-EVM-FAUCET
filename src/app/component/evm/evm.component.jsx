@@ -60,8 +60,8 @@ export default function EVM() {
 
       {/* Subtitle */}
       <h2 className="mt-[20px] h-[26px] text-center mx-5 md:mb-0 mb-12">
-        To prevent bots and abuse, the PWR EVM Faucet allows you to claim once
-        every 24 hours
+        To prevent bots and abuse, the Ethereum 2.0 Faucet allows you to claim
+        once every 24 hours in the Ethereum faucet, change the button to ETH
       </h2>
 
       <form className="mx-5">
