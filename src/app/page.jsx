@@ -31,7 +31,7 @@ export default function Home() {
             className={`${Boxbtn} w-[279px] rounded-[56px] border ${border} flex justify-start items-start`}
           >
             <div
-              className={`px-4 py-1 flex-col justify-start items-start inline-flex ${
+              className={` flex flex-col justify-start items-start px-4 ${
                 activeButton === "PWR"
                   ? "border border-indigo-500 rounded-[64px]"
                   : ""
@@ -45,7 +45,7 @@ export default function Home() {
               </button>
             </div>
             <div
-              className={`px-4 py-1 flex-col justify-start items-start inline-flex ${
+              className={`flex flex-col justify-start items-start px-4 ${
                 activeButton === "EVM"
                   ? "border border-indigo-500 rounded-[64px]"
                   : ""
