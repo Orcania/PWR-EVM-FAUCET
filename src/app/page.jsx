@@ -53,7 +53,7 @@ export default function Home() {
             >
               <button
                 onClick={() => toggleButton("EVM")}
-                className={`${txtbtn} px-4 py-3`}
+                className={`${txtbtn} px-[22.5px] py-3`}
               >
                 Ethereum +
               </button>
