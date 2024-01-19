@@ -52,7 +52,6 @@ export default function EVM() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     claimTokens();
-    setValue("");
   };
 
   return (

@@ -47,7 +47,6 @@ export default function PWR() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     claimTokens();
-    setValue("");
   };
 
   return (
