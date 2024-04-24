@@ -4,15 +4,14 @@ import axios from "axios";
 
 import { useEffect, useState } from "react";
 
-import Image from "next/image";
-
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function PWR() {
   const url = process.env.NEXT_PUBLIC_API_PWR;
 
   const [token, setToken] = useState();
+  const [value, setValue] = useState("");
 
   useEffect(() => {
     axios({
@@ -26,8 +25,6 @@ export default function PWR() {
     console.log(token);
   }, [token, url]);
 
-  const [value, setValue] = useState("");
-
   const onChange = (e) => {
     setValue(e.target.value);
   };
@@ -39,16 +36,17 @@ export default function PWR() {
     }).then((res) => {
       if (res.data.status == "fail" || res.data.status == "error") {
         toast.error(res.data.data.message);
+        console.log(res.data.data.message);
+        console.log("button clicked");
       } else if (res.data.status == "success") {
         toast.success("PWR Claimed");
       }
     });
   }
 
-  const [activeButton, setActiveButton] = useState("PWR");
-
-  const toggleButton = (buttonName) => {
-    setActiveButton(buttonName);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    claimTokens();
   };
 
   return (
@@ -64,7 +62,7 @@ export default function PWR() {
         24 hours
       </h2>
 
-      <form className="mx-5">
+      <form className="mx-5" onSubmit={handleFormSubmit}>
         {/* Field */}
         <div className="flex flex-col items-center field mt-9 space-y-4 ">
           <input
@@ -76,12 +74,12 @@ export default function PWR() {
             style={{ color: "white" }}
           />
 
-          <div
-            onClick={claimTokens}
+          <button
+            type="submit"
             className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-[#112FF8] rounded-[32px] px-6 py-2 text-sm text-white"
           >
-            Give Me 100 BTC
-          </div>
+            Give Me 100 PWR
+          </button>
         </div>
 
         <div className="bg-gray-800 rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
