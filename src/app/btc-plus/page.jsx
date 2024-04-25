@@ -85,7 +85,7 @@ export default function BTCPlus() {
                 onClick={() => toggleButton(CHAIN_TYPE.EVM)}
                 className={`${theme.txtbtn} px-5 py-3`}
               >
-                Eth +
+                Eth+
               </button>
             </div>
             <div
