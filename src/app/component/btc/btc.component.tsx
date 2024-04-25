@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function BTC() {
   const url = process.env.NEXT_PUBLIC_API_BTC;
 
-  const [token, setToken] = useState();
+  const [token, setToken] = useState<undefined | number>();
 
   useEffect(() => {
     axios({
@@ -22,13 +22,13 @@ export default function BTC() {
       .then((res) => {
         setToken(res.data.data.claimedPWR);
       })
-      .catch((err) => setToken("Error"));
+      .catch((err) => setToken(undefined));
     console.log(token);
   }, [token, url]);
 
   const [value, setValue] = useState("");
 
-  const onChange = (e) => {
+  const onChange = (e: any) => {
     setValue(e.target.value);
   };
 
@@ -47,7 +47,7 @@ export default function BTC() {
 
   const [activeButton, setActiveButton] = useState("PWR");
 
-  const toggleButton = (buttonName) => {
+  const toggleButton = (buttonName: any) => {
     setActiveButton(buttonName);
   };
 

@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Pwr from "@/app/component/pwr/pwr.component";
 import EVM from "@/app/component/evm/evm.component";
-import BTC from "@/app/component/btc/BTC.component";
+import BTC from "@/app/component/btc/btc.component";
 
 const CHAIN_TYPE = {
   PWR: "pwr",
@@ -17,7 +17,7 @@ const CHAIN_TYPE = {
   BTC: "btc",
 };
 
-export default function Home() {
+export default function PWRPlus() {
   const [activeButton, setActiveButton] = useState(CHAIN_TYPE.PWR);
 
   function toggleButton(buttonName) {

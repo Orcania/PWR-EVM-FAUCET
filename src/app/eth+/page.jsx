@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import FooterComponent from "@/app/component/footer/footer.component";
+import FooterComponent from "@/";
 import HeaderComponent from "@/app/component/header/header.component";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -17,7 +17,7 @@ const CHAIN_TYPE = {
   BTC: "btc",
 };
 
-export default function Home() {
+export default function ETHPlus() {
   const [activeButton, setActiveButton] = useState(CHAIN_TYPE.EVM);
 
   function toggleButton(buttonName) {

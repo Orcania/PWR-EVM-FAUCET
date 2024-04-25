@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-import FooterComponent from "@/app/component/footer/footer.component";
-import HeaderComponent from "@/app/component/header/header.component";
+import FooterComponent from "@component/footer/footer.component";
+import HeaderComponent from "@component/header/header.component";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Pwr from "@/app/component/pwr/pwr.component";
-import EVM from "@/app/component/evm/evm.component";
-import BTC from "@/app/component/btc/BTC.component";
+import Pwr from "@component/pwr/pwr.component";
+import EVM from "@component/evm/evm.component";
+import BTC from "@component/btc/btc.component";
 
 const CHAIN_TYPE = {
   PWR: "pwr",
@@ -17,7 +17,7 @@ const CHAIN_TYPE = {
   BTC: "btc",
 };
 
-export default function Home() {
+export default function BTCPlus() {
   const [activeButton, setActiveButton] = useState(CHAIN_TYPE.BTC);
 
   function toggleButton(buttonName) {
