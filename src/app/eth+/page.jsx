@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-import FooterComponent from "@/";
+import FooterComponent from "@/app/component/footer/footer.component";
 import HeaderComponent from "@/app/component/header/header.component";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Pwr from "@/app/component/pwr/pwr.component";
 import EVM from "@/app/component/evm/evm.component";
-import BTC from "@/app/component/btc/BTC.component";
+import BTC from "@/app/component/btc/btc.component";
 
 const CHAIN_TYPE = {
   PWR: "pwr",
