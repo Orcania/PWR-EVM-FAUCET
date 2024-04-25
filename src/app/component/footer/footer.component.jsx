@@ -2,12 +2,46 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function FooterComponent({ activeButton }) {
-  const bgColor = activeButton === "PWR" ? "bg-gray-900" : "bg-white";
-  const textColor = activeButton === "PWR" ? "text-white" : "text-black";
-  const svgColor = activeButton === "PWR" ? "white" : "black";
-  const socail = activeButton === "PWR" ? "bg-white" : "bg-gray-800";
-  const socailColor = activeButton === "PWR" ? "text-black" : "text-white";
-
+  const bgColor =
+    activeButton === "pwr"
+      ? "bg-gray-900"
+      : activeButton === "evm"
+      ? "bg-white"
+      : activeButton === "btc"
+      ? "bg-white"
+      : "";
+  const textColor =
+    activeButton === "pwr"
+      ? "text-white"
+      : activeButton === "evm"
+      ? "text-gray-900"
+      : activeButton === "btc"
+      ? "text-gray-900"
+      : "text-white";
+  const svgColor =
+    activeButton === "pwr"
+      ? "white"
+      : activeButton === "evm"
+      ? "black"
+      : activeButton === "btc"
+      ? "black"
+      : "black";
+  const socail =
+    activeButton === "pwr"
+      ? "bg-white"
+      : activeButton === "evm"
+      ? "bg-gray-800"
+      : activeButton === "btc"
+      ? "bg-gray-800"
+      : "";
+  const socailColor =
+    activeButton === "pwr"
+      ? "text-black"
+      : activeButton === "evm"
+      ? "text-white"
+      : activeButton === "btc"
+      ? "text-white"
+      : "";
   const socials = [
     {
       icon: () => (
@@ -94,7 +128,7 @@ export default function FooterComponent({ activeButton }) {
         <h1
           className={`mt-6 text-sm ${textColor} text-center font-medium h-[24px] py-1`}
         >
-          @WOM Protocol Pte. Ltd. All Rights reserved
+          For more visit: <a href="https://www.pwrlabs.io/">www.pwrlabs.io</a>
         </h1>
         {/* Socials */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 items-center justify-items-center mt-8">

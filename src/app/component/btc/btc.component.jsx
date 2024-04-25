@@ -54,12 +54,12 @@ export default function BTC() {
   return (
     <main className="">
       {/* Title */}
-      <h1 className="font-bold md:text-[56px] text-3xl text-center h-[68px] mx-5 text-white">
+      <h1 className="font-bold md:text-[56px] text-3xl text-center h-[68px] mx-5 ">
         PWR Bitcoin+ Faucet
       </h1>
 
       {/* Subtitle */}
-      <h2 className="mt-[20px] h-[26px] text-center mx-5 md:mb-0 mb-12 text-white">
+      <h2 className="mt-[20px] h-[26px] text-center mx-5 md:mb-0 mb-12 ">
         To prevent bots and abuse, the PWR Bitcoin+ Faucet allows you to claim
         once every 24 hours
       </h2>
@@ -76,13 +76,13 @@ export default function BTC() {
 
           <div
             onClick={claimTokens}
-            className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-[#F2F3F7] rounded-[32px] px-6 py-2 text-sm text-black"
+            className="flex items-center text-white justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-orange-500 rounded-[32px] px-6 py-2 text-sm"
           >
             Give Me 100 PWR
           </div>
         </div>
 
-        <div className="bg-[#F9F8FF] rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
+        <div className="bg-white rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
           <div className="flex items-center gap-x-2 mt-3">
             <div className="h-[50px] flex justify-center items-center  mb-3">
               <svg

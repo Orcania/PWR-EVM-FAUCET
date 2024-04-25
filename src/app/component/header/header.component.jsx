@@ -1,11 +1,48 @@
 import Image from "next/image";
 
 export default function HeaderComponent({ activeButton }) {
-  const bgColor = activeButton === "PWR" ? "bg-gray-900" : "bg-white";
-  const textColor = activeButton === "PWR" ? "text-white" : "text-gray-900";
-  const svgColor = activeButton === "PWR" ? "white" : "black";
-  const borderBtn = activeButton === "PWR" ? "border-[#F2F3F7]" : "";
-  const bgBtn = activeButton === "PWR" ? "bg-gray-900" : "bg-[#F2F3F7] ";
+  console.log("activeButton", activeButton);
+
+  const bgColor =
+    activeButton === "pwr"
+      ? "bg-gray-900"
+      : activeButton === "evm"
+      ? "bg-white"
+      : activeButton === "btc"
+      ? "bg-white"
+      : "bg-white";
+  const textColor =
+    activeButton === "pwr"
+      ? "text-white"
+      : activeButton === "evm"
+      ? "text-gray-900"
+      : activeButton === "btc"
+      ? "text-gray-900"
+      : "text-gray-900";
+  const svgColor =
+    activeButton === "pwr"
+      ? "white"
+      : activeButton === "evm"
+      ? "black"
+      : activeButton === "btc"
+      ? "black"
+      : "black";
+  const borderBtn =
+    activeButton === "pwr"
+      ? "border-[#F2F3F7]"
+      : activeButton === "evm"
+      ? ""
+      : activeButton === "btc"
+      ? ""
+      : "";
+  const bgBtn =
+    activeButton === "pwr"
+      ? "bg-gray-900"
+      : activeButton === "evm"
+      ? "bg-[#F2F3F7]"
+      : activeButton === "btc"
+      ? "bg-[#F2F3F7]"
+      : "bg-[#F2F3F7]";
 
   return (
     <div

@@ -86,7 +86,7 @@ export default function EVM() {
           </button>
         </div>
 
-        <div className="bg-[#F9F8FF] rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
+        <div className="bg-white rounded-xl sm:w-[502px] w-full h-[88px] mx-auto px-4 py-2 mt-12">
           <div className="flex items-center gap-x-2 mt-3">
             <div className="h-[50px] flex justify-center items-center  mb-3">
               <svg
