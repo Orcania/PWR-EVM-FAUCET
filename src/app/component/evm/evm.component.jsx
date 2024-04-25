@@ -64,7 +64,7 @@ export default function EVM() {
       {/* Subtitle */}
       <h2 className="mt-[20px] h-[26px] text-center mx-5 md:mb-0 mb-12">
         To prevent bots and abuse, the Ethereum+ Faucet allows you to claim
-        once every 24 hours in the Ethereum faucet
+        once every 24 hours
       </h2>
 
       <form className="mx-5" onSubmit={handleFormSubmit}>
