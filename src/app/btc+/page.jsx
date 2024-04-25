@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import FooterComponent from "./component/footer/footer.component";
-import HeaderComponent from "./component/header/header.component";
+import FooterComponent from "../component/footer/footer.component";
+import HeaderComponent from "../component/header/header.component";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +19,7 @@ const CHAIN_TYPE = {
 };
 
 export default function Home() {
-  const [activeButton, setActiveButton] = useState(CHAIN_TYPE.PWR);
+  const [activeButton, setActiveButton] = useState(CHAIN_TYPE.BTC);
 
   function toggleButton(buttonName) {
     setActiveButton(buttonName);

@@ -19,7 +19,7 @@ const CHAIN_TYPE = {
 };
 
 export default function Home() {
-  const [activeButton, setActiveButton] = useState(CHAIN_TYPE.PWR);
+  const [activeButton, setActiveButton] = useState(CHAIN_TYPE.EVM);
 
   function toggleButton(buttonName) {
     setActiveButton(buttonName);

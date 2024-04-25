@@ -6,7 +6,7 @@ import FooterComponent from "../component/footer/footer.component";
 import HeaderComponent from "../component/header/header.component";
 
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css"; 
 import Pwr from "../component/pwr/pwr.component";
 import EVM from "../component/evm/evm.component";
 import PWR from "../component/pwr/pwr.component";
