@@ -2,15 +2,14 @@
 
 import { useState } from "react";
 
-import FooterComponent from "../component/footer/footer.component";
-import HeaderComponent from "../component/header/header.component";
+import FooterComponent from "@/app/component/footer/footer.component";
+import HeaderComponent from "@/app/component/header/header.component";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Pwr from "../component/pwr/pwr.component";
-import EVM from "../component/evm/evm.component";
-import PWR from "../component/pwr/pwr.component";
-import BTC from "../component/btc/BTC.component";
+import Pwr from "@/app/component/pwr/pwr.component";
+import EVM from "@/app/component/evm/evm.component";
+import BTC from "@/app/component/btc/BTC.component";
 
 const CHAIN_TYPE = {
   PWR: "pwr",
@@ -59,7 +58,8 @@ export default function Home() {
       <div className="main-section w-full flex flex-col justify-center items-center pt-10">
         <div className="flex justify-center items-center my-20 md:w-2/4 w-full ">
           <div
-            className={`${theme.boxbtn}  rounded-[56px] border ${theme.border} flex justify-start items-start`}>
+            className={`${theme.boxbtn}  rounded-[56px] border ${theme.border} flex justify-start items-start`}
+          >
             <div
               className={` ${
                 activeButton === CHAIN_TYPE.PWR
