@@ -85,7 +85,7 @@ export default function Home() {
                 onClick={() => toggleButton(CHAIN_TYPE.EVM)}
                 className={`${theme.txtbtn} px-5 py-3`}
               >
-                Eth+
+                ETH+
               </button>
             </div>
             <div
