@@ -78,7 +78,7 @@ export default function BTC() {
             onClick={claimTokens}
             className="flex items-center text-white justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-orange-500 rounded-[32px] px-6 py-2 text-sm"
           >
-            Give Me 100 PWR
+            Give Me 100 BTC
           </div>
         </div>
 
