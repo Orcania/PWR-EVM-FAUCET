@@ -53,7 +53,7 @@ export default function PWR() {
     <main className="">
       {/* Title */}
       <h1 className="font-bold md:text-[56px] text-3xl text-center h-[68px] mx-5 text-white">
-        BTC Base Layer Faucet
+        PWR Base Layer Faucet
       </h1>
 
       {/* Subtitle */}

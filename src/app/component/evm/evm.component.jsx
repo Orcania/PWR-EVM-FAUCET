@@ -8,8 +8,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function EVM() {
-  const url = process.env.NEXT_PUBLIC_API_EVM;
-
+  const url = process.env.NEXT_PUBLIC_API_DOGE;
+  console.log("url", url);
   const [token, setToken] = useState();
   const [value, setValue] = useState("");
 
@@ -63,8 +63,8 @@ export default function EVM() {
 
       {/* Subtitle */}
       <h2 className="mt-[20px] h-[26px] text-center mx-5 md:mb-0 mb-12">
-        To prevent bots and abuse, the Ethereum+ Faucet allows you to claim
-        once every 24 hours
+        To prevent bots and abuse, the Ethereum+ Faucet allows you to claim once
+        every 24 hours
       </h2>
 
       <form className="mx-5" onSubmit={handleFormSubmit}>
