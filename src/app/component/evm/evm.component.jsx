@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function EVM() {
-  const url = process.env.NEXT_PUBLIC_API_DOGE;
+  const url = process.env.NEXT_PUBLIC_API_EVM;
   console.log("url", url);
   const [token, setToken] = useState();
   const [value, setValue] = useState("");
