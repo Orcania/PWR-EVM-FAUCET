@@ -78,7 +78,7 @@ export default function PWR() {
             type="submit"
             className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-[#112FF8] rounded-[32px] px-6 py-2 text-sm text-white"
           >
-            Give Me 100 PWR
+            Give Me 10 PWR
           </button>
         </div>
 
