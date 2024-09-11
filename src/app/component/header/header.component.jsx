@@ -44,6 +44,15 @@ export default function HeaderComponent({ activeButton }) {
       ? "bg-[#F2F3F7]"
       : "bg-[#F2F3F7]";
 
+  const hoverStyles =
+    activeButton === "pwr"
+      ? "hover:bg-white hover:text-gray-900 hover:border-gray-900"
+      : activeButton === "evm"
+      ? "hover:bg-blue-500 hover:text-white"
+      : activeButton === "btc"
+      ? "hover:bg-orange-500 hover:text-white"
+      : "hover:bg-gray-900 hover:text-white hover:border-gray-900";
+
   const handleButtonClick = () => {
     let url = "";
     switch (activeButton) {
@@ -59,7 +68,7 @@ export default function HeaderComponent({ activeButton }) {
       default:
         url = "#";
     }
-    window.location.href = url;
+    window.open(url, "_blank");
   };
   return (
     <div
@@ -88,7 +97,7 @@ export default function HeaderComponent({ activeButton }) {
           />
         </svg>
         <button
-          className={`border ${borderBtn}  ${bgBtn}  rounded-[32px]  md:text-sm px-8 md:px-4 md:py-2 py-3 ${textColor}`}
+          className={`border ${borderBtn}  ${bgBtn} ${hoverStyles} rounded-[32px]  md:text-sm px-8 md:px-4 md:py-2 py-3 ${textColor}`}
           onClick={handleButtonClick}
         >
           Learn More
