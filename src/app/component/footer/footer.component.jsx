@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function FooterComponent({ activeButton }) {
   console.log("activeButton", activeButton);
-  
+
   const bgColor =
     activeButton === "pwr"
       ? "bg-gray-900"

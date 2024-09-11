@@ -76,7 +76,11 @@ export default function BTC() {
 
           <div
             onClick={claimTokens}
-            className="flex items-center text-white justify-center cursor-pointer sm:w-[502px] w-full h-[48px] bg-orange-500 rounded-[32px] px-6 py-2 text-sm"
+            className="flex items-center justify-center cursor-pointer sm:w-[502px] w-full h-[48px] rounded-[32px] px-6 py-2 text-sm transition-all duration-300 ease-in-out 
+            bg-orange-500 text-white 
+            hover:bg-orange-300 
+            active:bg-orange-600 
+           "
           >
             Give Me 100 BTC
           </div>
