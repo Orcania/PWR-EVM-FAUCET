@@ -44,6 +44,23 @@ export default function HeaderComponent({ activeButton }) {
       ? "bg-[#F2F3F7]"
       : "bg-[#F2F3F7]";
 
+  const handleButtonClick = () => {
+    let url = "";
+    switch (activeButton) {
+      case "pwr":
+        url = "https://pwrlabs.io";
+        break;
+      case "evm":
+        url = "https://www.pwrlabs.io/ethereum+";
+        break;
+      case "btc":
+        url = "https://www.pwrlabs.io/bitcoin";
+        break;
+      default:
+        url = "#";
+    }
+    window.location.href = url;
+  };
   return (
     <div
       className={`${bgColor}`}
@@ -72,6 +89,7 @@ export default function HeaderComponent({ activeButton }) {
         </svg>
         <button
           className={`border ${borderBtn}  ${bgBtn}  rounded-[32px]  md:text-sm px-8 md:px-4 md:py-2 py-3 ${textColor}`}
+          onClick={handleButtonClick}
         >
           Learn More
         </button>
