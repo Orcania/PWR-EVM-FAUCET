@@ -25,7 +25,7 @@ main {
   @apply py-2;
 
   @apply text-sm;
-
+  
   @apply hover:border-[#AE9CFE];
 
   @apply transition;

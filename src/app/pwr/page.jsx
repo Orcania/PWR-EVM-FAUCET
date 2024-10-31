@@ -13,8 +13,8 @@ import BTC from "@/app/component/btc/btc.component";
 
 const CHAIN_TYPE = {
   PWR: "pwr",
-  EVM: "evm",
-  BTC: "btc",
+  // EVM: "evm",
+  // BTC: "btc",
 };
 
 export default function PWRPlus() {
@@ -58,7 +58,8 @@ export default function PWRPlus() {
       <div className="main-section w-full flex flex-col justify-center items-center pt-10">
         <div className="flex justify-center items-center my-20 md:w-2/4 w-full ">
           <div
-            className={`${theme.boxbtn}  rounded-[56px] border ${theme.border} flex justify-start items-start`}>
+            className={`${theme.boxbtn}  rounded-[56px] border ${theme.border} flex justify-start items-start`}
+          >
             <div
               className={` ${
                 activeButton === CHAIN_TYPE.PWR
@@ -70,10 +71,10 @@ export default function PWRPlus() {
                 onClick={() => toggleButton(CHAIN_TYPE.PWR)}
                 className={`${theme.txtbtn} py-3   px-5 `}
               >
-                PWR
+                Give me PWR
               </button>
             </div>
-            <div
+            {/* <div
               className={`${
                 activeButton === CHAIN_TYPE.EVM
                   ? "border border-indigo-500 rounded-[64px]"
@@ -86,8 +87,8 @@ export default function PWRPlus() {
               >
                 ETH+
               </button>
-            </div>
-            <div
+            </div> */}
+            {/* <div
               className={` ${
                 activeButton === CHAIN_TYPE.BTC
                   ? "border border-orange-500 rounded-[64px]"
@@ -100,15 +101,15 @@ export default function PWRPlus() {
               >
                 BTC+
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <ToastContainer />
 
         {activeButton === CHAIN_TYPE.PWR && <Pwr />}
-        {activeButton === CHAIN_TYPE.EVM && <EVM />}
-        {activeButton === CHAIN_TYPE.BTC && <BTC />}
+        {/* {activeButton === CHAIN_TYPE.EVM && <EVM />}
+        {activeButton === CHAIN_TYPE.BTC && <BTC />} */}
       </div>
 
       <FooterComponent activeButton={activeButton}></FooterComponent>
