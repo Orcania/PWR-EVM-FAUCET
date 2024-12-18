@@ -13,12 +13,12 @@ import BTC from "@/app/component/btc/btc.component";
 
 const CHAIN_TYPE = {
   PWR: "pwr",
-  // EVM: "evm",
+  EVM: "evm",
   BTC: "btc",
 };
 
-export default function PWRPlus() {
-  const [activeButton, setActiveButton] = useState(CHAIN_TYPE.PWR);
+export default function BTCPlus() {
+  const [activeButton, setActiveButton] = useState(CHAIN_TYPE.BTC);
 
   function toggleButton(buttonName) {
     setActiveButton(buttonName);
@@ -71,23 +71,23 @@ export default function PWRPlus() {
                 onClick={() => toggleButton(CHAIN_TYPE.PWR)}
                 className={`${theme.txtbtn} py-3   px-5 `}
               >
-                Give me PWR
+                PWR
               </button>
             </div>
-            {/* <div
+            <div
               className={`${
                 activeButton === CHAIN_TYPE.EVM
                   ? "border border-indigo-500 rounded-[64px]"
                   : ""
               }`}
             >
-              <button
+              {/* <button
                 onClick={() => toggleButton(CHAIN_TYPE.EVM)}
                 className={`${theme.txtbtn} px-5 py-3`}
               >
                 ETH+
-              </button>
-            </div> */}
+              </button> */}
+            </div>
             <div
               className={` ${
                 activeButton === CHAIN_TYPE.BTC
@@ -108,10 +108,8 @@ export default function PWRPlus() {
         <ToastContainer />
 
         {activeButton === CHAIN_TYPE.PWR && <Pwr />}
+        {/* {activeButton === CHAIN_TYPE.EVM && <EVM />} */}
         {activeButton === CHAIN_TYPE.BTC && <BTC />}
-        
-        {/* {activeButton === CHAIN_TYPE.EVM && <EVM />}
-        {activeButton === CHAIN_TYPE.BTC && <BTC />} */}
       </div>
 
       <FooterComponent activeButton={activeButton}></FooterComponent>

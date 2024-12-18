@@ -14,7 +14,7 @@ import BTC from "@/app/component/btc/btc.component";
 const CHAIN_TYPE = {
   PWR: "pwr",
   // EVM: "evm",
-  // BTC: "btc",
+  BTC: "btc",
 };
 
 export default function Home() {
@@ -45,10 +45,10 @@ export default function Home() {
     },
   };
 
-  // const bgColor = activeButton === "PWR" ? "bg-gray-900" : "bg-white";
-  // const Boxbtn = activeButton === "PWR" ? "bg-gray-900" : "bg-white";
-  // const txtbtn = activeButton === "PWR" ? "text-white" : "text-gray-900";
-  // const border = activeButton === "PWR" ? "border-gray-700" : "";
+  const bgColor = activeButton === "PWR" ? "bg-gray-900" : "bg-white";
+  const Boxbtn = activeButton === "PWR" ? "bg-gray-900" : "bg-white";
+  const txtbtn = activeButton === "PWR" ? "text-white" : "text-gray-900";
+  const border = activeButton === "PWR" ? "border-gray-700" : "";
 
   const theme = styles[activeButton];
 
@@ -88,7 +88,7 @@ export default function Home() {
                 ETH+
               </button>
             </div> */}
-            {/* <div
+            <div
               className={` ${
                 activeButton === CHAIN_TYPE.BTC
                   ? "border border-orange-500 rounded-[64px]"
@@ -101,13 +101,14 @@ export default function Home() {
               >
                 BTC+
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
 
         <ToastContainer />
 
         {activeButton === CHAIN_TYPE.PWR && <Pwr />}
+        {activeButton === CHAIN_TYPE.BTC && <BTC />} 
         {/* {activeButton === CHAIN_TYPE.EVM && <EVM />}
         {activeButton === CHAIN_TYPE.BTC && <BTC />} */}
       </div>
